@@ -1,0 +1,64 @@
+.container {
+	margin: 30px;
+}
+
+.posts-list {
+	display: grid;
+    width: 100%;
+    grid-gap: 6rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    align-items: start;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 80px 0;
+}
+
+header .title h1 {
+	font-size: 40px;
+}
+
+header .search {
+    display: flex;
+}
+
+header .sort {
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+}
+
+header input,
+header select {
+	min-width: 250px;
+	font-family: inherit;
+	color: #292929;
+	width: 100%;
+	padding: 10px 15px;
+	background-color: transparent;
+	border: 1px solid #292929;
+	outline: none;
+	border-radius: 0.4rem;
+	margin-right: 10px;
+}
+
+header input::placeholder {
+	color: #292929;
+}
+
+footer {	
+    left: 0;
+    bottom: 0;
+    width: 100%;
+	padding: 40px 0 20px 0;
+}
+
+@media only screen and (max-width: 600px) {
+	.posts-list {
+		grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+	}
+}
